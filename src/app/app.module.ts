@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { Contacts} from '@ionic-native/contacts';
 
 import { MyApp } from './app.component';
 import { HomePage,GuardadosPage,MapaPage,TabsPage } from '../pages/index.paginas';
@@ -38,6 +39,7 @@ import { AgmCoreModule } from '@agm/core'
     SplashScreen,
     BarcodeScanner,
     InAppBrowser,
+    Contacts,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     HistorialProvider
   ]

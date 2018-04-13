@@ -16,7 +16,10 @@ export class GuardadosPage {
   historial:ScanData[]=[];
   tipos:string[]=[];
   constructor(private hist:HistorialProvider) {
-
+    this.historial= this.hist.cargarHistorial();
+    this.tipos = this.historial.map(r=>r.tipo).filter((r,i,self)=>{
+      return self.indexOf(r)===i;
+    });
   }
   //ionViewWillEnter
   ionViewDidLoad() {
