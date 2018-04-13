@@ -49,8 +49,8 @@ END:VCARD`);
         console.log('cancelado', barcodeData.cancelled);*/
         if(!barcodeData.cancelled && barcodeData.text!=null )
         {
-          this.hist.agregarHistorial(barcodeData.text);
           this.mostrarError(`Agregado barcode`);
+          this.hist.agregarHistorial(barcodeData.text);          
         }
       }//,erro=>{console.log(erro);});
       ).catch(err => {

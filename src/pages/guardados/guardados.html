@@ -14,6 +14,14 @@
 
 
 <ion-content>
+  <ion-refresher enabled=true (ionRefresh)="refrescar($event)">
+   <ion-refresher-content
+     pullingIcon="arrow-dropdown"
+     pullingText="Pull to refresh"
+     refreshingSpinner="circles"
+     refreshingText="Refreshing...">
+   </ion-refresher-content>
+ </ion-refresher>
    <ion-list *ngFor="let item1 of tipos">
      <ion-list-header>
       {{item1}}
